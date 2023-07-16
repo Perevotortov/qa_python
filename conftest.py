@@ -18,12 +18,3 @@ def books_collector_with_book(books_collector):
 def books_collector_with_favorite(books_collector, books_collector_with_book):
     books_collector.add_book_in_favorites('Сияние')
     return books_collector
-
-class TestFixtures:
-    #Проверка что фикстура добавила книгу в список
-    def test_books_collector_with_book(self, books_collector_with_book, books_collector):
-        assert books_collector.get_books_genre() == {'Сияние': 'Ужасы'}
-
-    #Проверка что Сияние добавлено в избранное
-    def test_books_collector_with_favorite(self, books_collector, books_collector_with_favorite):
-        assert 'Сияние' in books_collector.favorites
